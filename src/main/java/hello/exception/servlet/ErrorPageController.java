@@ -25,6 +25,13 @@ public class ErrorPageController {
         return "error-page/404";
     }
 
+    @RequestMapping("/error-page/400")
+    public String errorPage400(HttpServletRequest request, HttpServletResponse response) {
+        log.info("error-page/400");
+        printErrorInfo(request);
+        return "error-page/400";
+    }
+
     @RequestMapping("/error-page/500")
     public String errorPage500(HttpServletRequest request, HttpServletResponse response) {
         log.info("error-page/500");
